@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body class="flex bg-slate-900 text-white bg-repeat-y">
+    <nav class="fixed top-0 left-0 w-52 h-svh">
+      <h1><a href="../index.html">Empresa</a></h1>
+      <ul>
+        <li><a href="#">Inventario</a></li>
+        <li><a href="#">Compras</a></li>
+        <li><a href="#">Ventas</a></li>
+      </ul>
+    </nav>
+    <main class="w-full flex-col items-center justify-center mx-32">
+      <h2 class="text-3xl font-bold justify-center flex my-5">
+        Inventario de Productos
+      </h2>
+
+      <!-- ver porque no agarra mediqueries -->
+      <section class="sm:flex-row m-4 py-4 flex gap-6 justify-center">
+        <div>
+          <img
+            class="mt-4"
+            width="100"
+            height="100"
+            src="https://img.icons8.com/stickers/100/products-pile.png"
+            alt="products-pile"
+          />
+        </div>
+        <div
+          class="flex flex-col justify-start w-50 border border-gray-200 p-4 rounded-md"
+        >
+          <label class="text-sm items-start text-violet-500" for="productos"
+            >Nombre del nuevo producto</label
+          >
+          <input
+            class="h-full rounded-md border-2 border-gray-200 bg-transparent py-0 px-14 text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+            type="text"
+            id="nombreProductoNuevo"
+          />
+          <label class="text-sm items-start text-violet-500" for="productos"
+            >Precio del producto</label
+          >
+          <input
+            class="h-full rounded-md border-2 border-gray-200 bg-transparent py-0 px-14 text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+            type="text"
+            id="precioProductoNuevo"
+          />
+          <button
+            id="agregarNuevoBtn"
+            type="submit"
+            class="block my-2 w-full rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+            Crear nuevo producto <i class="ml-2 bi bi-plus-circle"></i>
+          </button>
+        </div>
+        <div
+          class="flex flex-col justify-start w-50 border border-gray-200 p-4 rounded-md"
+        >
+          <label class="text-sm items-start text-violet-500" for="productos"
+            >Nombre del producto</label
+          >
+          <select
+            class="h-full rounded-md border-2 bg-transparent py-0 px-14 text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+            name=""
+            id="productosInv"
+          >
+            <option class="" value="" id="algo1"></option>
+          </select>
+
+          <label class="text-sm items-start text-violet-500" for="productos"
+            >Precio nuevo</label
+          >
+          <input
+            class="h-full rounded-md border-2 bg-transparent py-0 px-14 text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+            type="text"
+            id="inputModPrecioInv"
+          />
+          <button
+            id="modPrecioInvBtn"
+            type="submit"
+            class="block my-2 w-full rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          >
+            Modificar precio <i class="ml-2 bi bi-pencil"></i>
+          </button>
+        </div>
+      </section>
+
+      <section class="tablaInv p-4">
+        <div class="flex flex-col m-auto items-center">
+          <table
+            class="border-separate border-spacing-x-4 border border-slate-200 rounded-md items-start w-full"
+          >
+            <thead class="text-lg items-center">
+              <tr>
+                <th class="pr-4 items-start">Nombre</th>
+                <th class="pr-4">Cant</th>
+                <th class="pr-4">Precio Uni</th>
+                <th class="pr-4 items-start">Operacion</th>
+              </tr>
+            </thead>
+            <tbody class="text-center ml-2" id="tableInv"></tbody>
+            <tfoot>
+              <tr>
+                <th class="text-center">Total:</th>
+                <th></th>
+                <th class="text-center" id="total">0</th>
+                <th></th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <!-- link de imagenes -->
+      <a
+        class="text-slate-900"
+        href="https://icons8.com/icon/zQzZKJTWEBdb/inventory"
+        >inventory</a
+      >
+      icon by <a href="https://icons8.com">Icons8</a>
+    </main>
+    <script src="classProducto.js"></script>
+    <script src="classItem.js"></script>
+    <script src="moduloInventario.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
