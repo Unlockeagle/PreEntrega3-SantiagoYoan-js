@@ -17,45 +17,73 @@
     <link rel="shortcut icon" href="" type="image/x-icon" />
     <link rel="stylesheet" href="output.css" />
   </head>
-  <body class="flex  text-white">
+  <body class="flex text-white">
     <!-- Navbar -->
-    <nav 
-    id="navBar" 
-    class=" mx-4 mt-16 h-svh">
-    <img class="h-14 w-14" src="https://images.vexels.com/media/users/3/142887/isolated/preview/fc58c5ffb8c2e33fc3e15a2453189825-logotipo-de-empresa-logistica-en-crecimiento.png" alt="">
+    <nav
+      id="navBar"
+      class="mx-4 mt-16 h-svh ease-linear duration-300 transition"
+    >
+      <img
+        class="h-14 w-14"
+        src="https://images.vexels.com/media/users/3/142887/isolated/preview/fc58c5ffb8c2e33fc3e15a2453189825-logotipo-de-empresa-logistica-en-crecimiento.png"
+        alt=""
+      />
       <h1 class="text-white text-3xl">Empresa</h1>
-      
-      <ul class="ml-4 mt-8 ">
-        <li><a class="block mt-2
-        w-28 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="../index.html">Inicio</a></li>
-        <li><a class="block mt-2
-        w-28 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="inventario.html">Inventario</a></li>
-        <li><a class="block mt-2
-        w-28 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="compras.html">Compras</a></li>
-        <li><a class="block mt-2
-        w-28 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="#">Ventas</a></li>
-        <li><a
-          class="text-slate-900"
-          href="https://icons8.com/icon/zQzZKJTWEBdb/inventory"
-          >inventory</a
-        ></li>
+
+      <ul class="ml-4 mt-8">
+        <li>
+          <a
+            class="block mt-2 w-28 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            href="../index.html"
+            >Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            class="block mt-2 w-28 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            href="inventario.html"
+            >Inventario</a
+          >
+        </li>
+        <li>
+          <a
+            class="block mt-2 w-28 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            href="compras.html"
+            >Compras</a
+          >
+        </li>
+        <li>
+          <a
+            class="block mt-2 w-28 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            href="#"
+            >Ventas</a
+          >
+        </li>
+        <li>
+          <a
+            class="text-slate-900"
+            href="https://icons8.com/icon/zQzZKJTWEBdb/inventory"
+            >inventory</a
+          >
+        </li>
         <li>icon by <a href="https://icons8.com">Icons8</a></li>
       </ul>
-      
     </nav>
-    
-    <main class="w-[1000px] h-full flex-col m-auto items-center justify-center gap-4 mt-4 ">
-    
-      <header class=" mt-2 w-full flex justify-center z-10">
+
+    <main
+      class="w-[1000px] h-full flex-col m-auto items-center justify-center gap-4 mt-4"
+    >
+      <header class="mt-2 w-full flex justify-center z-10">
         <button
-        id="toggle"
-        type="button" 
-        class="block ml-2 mt-10
-       h-8 w-16 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><i class="bi bi-list"></i></button>      
-  
-        <div class=" flex-col m-auto items-center gap-4 my-2">
+          id="toggle"
+          type="button"
+          class="block ml-2 mt-10 h-8 w-16 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >
+          <i class="bi bi-list"></i>
+        </button>
+
+        <div class="flex-col m-auto items-center gap-4 my-2">
           <div class="flex items-center justify-center mt-4 gap-4">
-      
             <img
               class="mb-6"
               width="100"
@@ -63,83 +91,59 @@
               src="https://images.vexels.com/media/users/3/142887/isolated/preview/fc58c5ffb8c2e33fc3e15a2453189825-logotipo-de-empresa-logistica-en-crecimiento.png"
               alt="products-pile"
             />
-            <h2 class="text-4xl font-bold">
-              Empresa
-            </h2>               
-    
-          </div>
-        </div>     
-  
-      </header>
-
-      <section class=" flex justify-start gap-4">
-        <div class="container flex flex-col m-auto items-start>
-          <div class="flex justify-center">  
-            <img width="100" height="100" src="https://img.icons8.com/stickers/100/handcart.png" alt="handcart"/>
-            <h2 class="text-4xl font-bold ml-2">
-              Compras
-            </h2>
+            <h2 class="text-4xl font-bold">Empresa</h2>
           </div>
         </div>
-        
-        <!-- //Crear Nuevo Producto -->
-        <!-- <div
-          class="container flex flex-col justify-start w-72 border bg-gray-900 border-gray-600 hover:border-gray-200 p-4 mt-4 rounded-md"
-        >
-        <h3 class="text-2xl">Crear Nuevo Producto</h3>
-          <label class="text-sm items-start text-violet-500 mt-2" for="productos"
-            >Nombre del nuevo producto</label
-          >
-          <input
-            class="h-full rounded-md border border-gray-200 bg-transparent py-1 px-14 text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-            type="text"
-            id="nombreProductoNuevo"
-          />
-          <label class="text-sm items-start text-violet-500 mt-2" for="productos"
-            >Precio del producto</label
-          >
-          <input
-            class="h-full rounded-md border border-gray-200 bg-transparent py-1 px-14 text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-            type="text"
-            id="precioProductoNuevo"
-          />
-          <button
-            id="agregarNuevoBtn"
-            type="submit"
-            class="block my-2 w-full rounded-md bg-indigo-600 px-3.5 p-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            Crear nuevo producto <i class="ml-2 bi bi-plus-circle"></i>
-          </button>
-        </div> -->
+      </header>
 
-        
+      <section class="flex justify-start gap-4">
+        <div class="container flex flex-col m-auto items-start">
+          <div class="flex justify-center">
+            <img
+              width="140"
+              height="140"
+              src="https://img.icons8.com/stickers/100/handcart.png"
+              alt="handcart"
+            />
+            <h2 class="text-4xl font-bold ml-2">Compras</h2>
+          </div>
+        </div>
+
         <!-- //Agregar compra -->
         <div
-          class=" container flex flex-col justify-start h-full w-72 border bg-gray-900 border-gray-600 hover:border-gray-200  p-4 mt-4  rounded-md"
+          class="container flex flex-col justify-start h-full w-72 border bg-gray-900 border-gray-600 hover:border-gray-200 p-4 mt-4 rounded-md"
         >
-        <h3 class="text-2xl">Agregar Compra</h3>
-        <label class="text-sm items-start text-violet-500 mt-2" for="productosComp"
-        >Nombre del producto</label
-        >
-        <select
-        class="h-full rounded-md border bg-transparent py-1 px-14 text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-        name="productosComp"
-        id="productosInvComp"
-        >
+          <h3 class="text-2xl">Agregar Compra</h3>
+          <label
+            class="text-sm items-start text-violet-500 mt-2"
+            for="productosComp"
+            >Nombre del producto</label
+          >
+          <select
+            class="h-full rounded-md border bg-transparent py-1 px-14 text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
+            name="productosComp"
+            id="productosInvComp"
+          >
             <option class="" value="" id="algo1"></option>
           </select>
 
-          <label class="text-sm items-start text-violet-500 mt-2" for="productosCant"
+          <label
+            class="text-sm items-start text-violet-500 mt-2"
+            for="productosCant"
             >Cantidad Comprada</label
           >
           <input
             class="h-full rounded-md border bg-transparent py-1 px-14 text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
             type="text"
-            id="inputModPrecioInv"
+            id="inputProductosCant"
             name="productosCant"
           />
-          <label class="text-sm items-start text-violet-500 mt-2" for="fecha">Fecha de la Compra</label>
-          <input class="h-8 rounded-md border bg-transparent py-1 px-14 text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm" type="date" min="2017-04-01 name="fecha" id="fechaComp">
+          <label class="text-sm items-start text-violet-500 mt-2" for="fecha"
+            >Fecha de la Compra</label
+          >
+          <input class="h-8 rounded-md border bg-transparent py-1 px-14
+          text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600
+          sm:text-sm" type="date" min="2017-04-01 name="fecha" id="fechaComp">
           <button
             id="modCantInvBtn"
             type="submit"
@@ -147,46 +151,39 @@
           >
             Agregar Compra <i class="ml-2 bi bi-plus-circle"></i>
           </button>
-          
         </div>
       </section>
-      
+
       <section class="p-4 h-full">
-        
-          <table
+        <table
           class="mt-4 border-separate border-spacing-x-4 border border-slate-200 rounded-md items-start w-full"
-          >
+        >
           <thead class="table-header-group text-xl">
             <tr>
-                <th class="pr-4 font-normal text-2xl">Fecha</th>
-                <th class="pr-4 font-normal items-start text-2xl ">Nombre</th>
-                <th class="pr-4 font-normal text-2xl">Cant</th>
-                <th class="pr-4 font-normal text-2xl">Precio Uni</th>
-                <th class="pr-4 font-normal items-start text-2xl">Operacion</th>
-              </tr>
-            </thead>
-            <tbody class="table-auto text-center ml-4" id="tableCompras"></tbody>
-            <tfoot class="table-footer-group">
-              <tr>
-                <th></th>
-                <th class="text-center">Total:</th>
-                <th></th>
-                <th class="text-center" id="total">0</th>
-                <th></th>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
+              <th class="pr-4 font-normal text-2xl">Fecha</th>
+              <th class="pr-4 font-normal items-start text-2xl">Nombre</th>
+              <th class="pr-4 font-normal text-2xl">Cant</th>
+              <th class="pr-4 font-normal text-2xl">Precio Uni</th>
+              <th class="pr-4 font-normal items-start text-2xl">Operacion</th>
+            </tr>
+          </thead>
+          <tbody class="table-auto text-center ml-4" id="tableCompras"></tbody>
+          <tfoot class="table-footer-group">
+            <tr>
+              <th></th>
+              <th class="text-center">Total:</th>
+              <th></th>
+              <th class="text-center" id="total">0</th>
+              <th></th>
+            </tr>
+          </tfoot>
+        </table>
       </section>
-      
-
-      
-      
     </main>
-    <script src="moduloCompras.js"></script>
-    <script src="classCompras.js"></script>
     <script src="classProducto.js"></script>
     <script src="classItem.js"></script>
+    <script src="classCompras.js"></script>
+    <script src="moduloCompras.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
