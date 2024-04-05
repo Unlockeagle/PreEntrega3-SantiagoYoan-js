@@ -6,80 +6,81 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
     <title>Document</title>
     <link rel="shortcut icon" href="" type="image/x-icon" />
-    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="/src/output.css" />
   </head>
-  <body>
-    <nav class="siderBar">
-      <h1>Empresa</h1>
-      <ul>
-        <li><a href="./src/inventario.html">Inventario</a></li>
-        <li><a href="#">Compras</a></li>
-        <li><a href="#">Ventas</a></li>
+  <body class="flex text-white ">    
+    <!-- navBar -->
+    <nav id="navBar" 
+      class=" mx-4 mt-16 h-svh">
+      <img class="h-14 w-14" src="https://images.vexels.com/media/users/3/142887/isolated/preview/fc58c5ffb8c2e33fc3e15a2453189825-logotipo-de-empresa-logistica-en-crecimiento.png" alt="">
+      <h1 class="text-white text-3xl">Empresa</h1>
+      
+      <ul class="ml-4 mt-8 ">
+        <li><a class="block mt-2
+        w-28 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="../index.html">Inicio</a></li>
+        <li><a class="block mt-2
+        w-28 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/src/inventario.html">Inventario</a></li>
+        <li><a class="block mt-2
+        w-28 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="/src/compras.html">Compras</a></li>
+        <li><a class="block mt-2
+        w-28 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" href="#">Ventas</a></li>
+        <li><a
+          class="text-slate-900"
+          href="https://icons8.com/icon/zQzZKJTWEBdb/inventory"
+          >inventory</a
+        ></li>
+        <li>icon by <a href="https://icons8.com">Icons8</a></li>
       </ul>
+      
     </nav>
-    <main>
-      <section>
-        <h2
-          class="text-3xl font-bold underline bg-red-500 justify-center flex my-5"
-        >
-          Inventario de Productos
-        </h2>
+    <main class="w-[1000px] h-full flex-col m-auto items-center justify-center gap-4 mt-4 ">
+      <header class="mt-2 w-full flex justify-between z-10">
+        <button
+        id="toggle"
+        type="button" 
+        class="block ml-2 mt-10
+       h-8 w-16 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><i class="bi bi-list"></i></button>
 
-        <div class="flex flex-col m-auto items-center">
-          <div class="flex flex-col justify-start w-50">
-            <label class="text-sm items-start text-violet-500" for="productos"
-              >Elija un Producto</label
-            >
-            <select
-              class="h-full rounded-md border-2 bg-transparent py-0 px-14 text-gray-800 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-              name=""
-              id="productos"
-            >
-              <option class="" value="" id="algo1"></option>
-            </select>
-            <button
-              id="agregar"
-              type="submit"
-              class="block my-2 w-full rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Agregar Producto
-            </button>
-          </div>
-        </div>
-      </section>
-      <section class="tabla">
-        <div class="flex flex-col m-auto items-center">
-          <table
-            class="border-separate border-spacing-x-4 border border-slate-200 rounded-md px-4 items-start"
-          >
-            <thead class="text-lg">
-              <tr>
-                <th class="pr-4 items-start">Nombre</th>
-                <th class="pr-4">Cantidad</th>
-                <th class="pr-4">Precio Unitario</th>
-                <th class="pr-4 items-start">Operacion</th>
-              </tr>
-            </thead>
-            <tbody class="text-left" id="items"></tbody>
-            <tfoot>
-              <tr>
-                <th class="text-left">Total:</th>
-                <th></th>
-                <th class="text-left" id="total">0</th>
-                <th></th>
-              </tr>
-            </tfoot>
-          </table>
-        </div>
-      </section>
+       
+          
+      </header>
+      <div class="flex-col m-auto justify-center gap-12 w-2/6">
+        <div class="flex items-center">
+
+          <img
+          class="mb-6"
+          width="100"
+          height="100"
+          src="https://images.vexels.com/media/users/3/142887/isolated/preview/fc58c5ffb8c2e33fc3e15a2453189825-logotipo-de-empresa-logistica-en-crecimiento.png"
+          alt="products-pile"
+          />
+          <h2 class="text-4xl font-bold mt-2 ml-2">
+            Empresa
+           </h2>        
+         </div>
+
+        <a href="/src/inventario.html" class="block my-4 w-full rounded-md bg-indigo-600 px-3.5 py-4 text-center text-2xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><i class="bi bi-boxes mr-4 text-3xl"></i>Inventario</a>
+
+        <a href="/src/compras.html" class="block my-4 w-full rounded-md bg-indigo-600 px-3.5 py-4 text-center text-2xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><i class="bi bi-database-add mr-4 text-3xl"></i>Compras</a>
+
+        <a class="block my-4 w-full rounded-md bg-indigo-600 px-3.5 py-4 text-center text-2xl font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"><i class="bi bi-cart-check mr-4 text-3xl"></i>Ventas</a>
+        
+      </div>
+
+      
+      
+      
     </main>
-    <script src="./src/classItem.js"></script>
-    <script src="./src/classProducto.js"></script>
+    
     <script src="./src/index.js"></script>
   </body>
 </html>
