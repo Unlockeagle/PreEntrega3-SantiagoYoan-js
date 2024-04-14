@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <title>Empresa - Compras</title>
+    <title>Empresa - Ventas</title>
     <link rel="shortcut icon" href="" type="image/x-icon" />
     <link rel="stylesheet" href="output.css" />
   </head>
@@ -102,10 +102,10 @@
             <img
               width="140"
               height="140"
-              src="https://img.icons8.com/stickers/100/handcart.png"
+              src="https://img.icons8.com/arcade/64/shopping-cart--v2.png"
               alt="handcart"
             />
-            <h2 class="text-4xl font-bold ml-2">Compras</h2>
+            <h2 class="text-4xl font-bold ml-2">Ventas</h2>
           </div>
         </div>
 
@@ -113,7 +113,7 @@
         <div
           class="container flex flex-col justify-start h-full w-72 border bg-gray-900 border-gray-600 hover:border-gray-200 p-4 mt-4 rounded-md"
         >
-          <h3 class="text-2xl">Agregar Compra</h3>
+          <h3 class="text-2xl">Agregar al Carrito</h3>
           <label
             class="text-sm items-start text-violet-500 mt-2"
             for="productosComp"
@@ -122,7 +122,7 @@
           <select
             class="h-full rounded-md border bg-transparent py-1 px-14 text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
             name="productosComp"
-            id="productosInvComp"
+            id="productosInvVta"
           >
             <option class="" value="" id="algo1"></option>
           </select>
@@ -130,30 +130,26 @@
           <label
             class="text-sm items-start text-violet-500 mt-2"
             for="productosCant"
-            >Cantidad Comprada</label
+            >Cantidad Vendida</label
           >
           <input
             class="h-full rounded-md border bg-transparent py-1 px-14 text-white focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm"
-            type="text"
-            id="inputProductosCant"
+            type="number"
+            id="inputProductosCantVta"
             name="productosCant"
           />
-          <label class="text-sm items-start text-violet-500 mt-2" for="fecha"
-            >Fecha de la Compra</label
-          >
-          
+                   
           <button
-            id="modCantInvBtn"
+            id="modCantVtaBtn"
             type="submit"
             class="block my-2 w-full rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
           >
-            Agregar Compra <i class="ml-2 bi bi-plus-circle"></i>
+            Agregar Ventas <i class="ml-2 bi bi-plus-circle"></i>
           </button>
         </div>
       </section>
 
       <section class="p-4 h-full">
-        <h2>Compras</h2>
         <table
           class="mt-4 border-separate border-spacing-x-4 border border-slate-200 rounded-md items-start w-full"
         >
@@ -166,7 +162,7 @@
               <th class="pr-4 font-normal items-start text-2xl">Operacion</th>
             </tr>
           </thead>
-          <tbody class="table-auto text-center ml-4" id="tableCompras2"></tbody>
+          <tbody class="table-auto text-center ml-4" id="tableVentas"></tbody>
           <tfoot class="table-footer-group">
             <tr>
               <th></th>
@@ -178,40 +174,11 @@
           </tfoot>
         </table>
       </section>
-
-      <section class="p-4 h-full">
-        <h2>Inventario</h2>
-        <table
-          class="mt-4 border-separate border-spacing-x-4 border border-slate-200 rounded-md items-start w-full"
-        >
-          <thead class="table-header-group text-xl">
-            <tr>
-              
-              <th class="pr-4 font-normal items-start text-2xl">Nombre</th>
-              <th class="pr-4 font-normal text-2xl">Cant</th>
-              <th class="pr-4 font-normal text-2xl">Precio Uni</th>
-              <th class="pr-4 font-normal items-start text-2xl">Operacion</th>
-            </tr>
-          </thead>
-          <tbody class="table-auto text-center ml-4" id="tableCompras"></tbody>
-          <tfoot class="table-footer-group">
-            <tr>
-              <th></th>
-              <th class="text-center">Total:</th>
-              <th></th>
-              <th class="text-center" id="total">0</th>
-              <th></th>
-            </tr>
-          </tfoot>
-        </table>
-      </section>
-      
     </main>
-    
+
+    <script src="moduloVentas.js"></script>
     <script src="classProducto.js"></script>
     <script src="classItem.js"></script>
-    <script src="classCompras.js"></script>
-    <script src="moduloCompras.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
