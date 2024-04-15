@@ -46,7 +46,7 @@ function dibijarTablaComp() {
   let tableComp2 = document.getElementById("tableCompras2");
   tableComp2.innerHTML = "";
 
-  compras.forEach((el) => {
+  compras.forEach((el, id) => {
     let tr = document.createElement("tr");
     tableComp2.append(tr);
 
@@ -61,14 +61,22 @@ function dibijarTablaComp() {
     th = document.createElement("th");
     tr.append(th);
     th.innerText = el.precio;
+
+    th = document.createElement("th");
+    tr.append(th);
+    th.innerText =el.cant * el.precio;
+
+
   });
 }
 dibijarTablaComp();
 
 // #region Compras
+let selectComp = document.getElementById("productosInvComp");
 function crearCompra() {
   let id = selectComp.value;
   let producto = inventario[id].nombre;
+  console.log(selectComp.value);
 
   // Obtén la cantidad del input y conviértela a un número entero
   let cant = parseInt(document.getElementById("inputProductosCant").value);
@@ -80,19 +88,18 @@ function crearCompra() {
   // }
 
   let precio = inventario[id].precio;
-  console.log(cant);
   // Crea un nuevo objeto Item y agrégalo a las ventas
   compras.push(new Item(producto, cant, precio));
 
   // Guarda las ventas actualizadas en el almacenamiento local
   localStorage.setItem("compras", JSON.stringify(compras));
-
+  
   console.log("Venta creada:", producto, cant, precio);
 }
 
-let selectComp = document.getElementById("productosInvComp");
 function rellenarSelectComp() {
   selectComp.innerHTML = "";
+
   inventario.forEach((el, id) => {
     let option = document.createElement("option");
     selectComp.append(option);
@@ -125,9 +132,9 @@ let modCantInvBtn = document.getElementById("modCantInvBtn");
 modCantInvBtn.onclick = () => {
   modCantInv();
   dibujarInventario();
-  rellenarSelectComp();
   crearCompra();
   dibijarTablaComp();
+  rellenarSelectComp();
   // Limpia los campos después de agregar un nuevo producto
   document.getElementById("inputProductosCant").value = "";
   // totalTodo()

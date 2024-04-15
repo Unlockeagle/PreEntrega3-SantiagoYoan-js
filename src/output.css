@@ -925,6 +925,11 @@ option {
   background: #111827;
 }
 
+.dark-mode1 {
+  background-color: #fefefe;
+  color: #202020;
+}
+
 .hover\:border-gray-200:hover {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
@@ -980,5 +985,4 @@ option {
     line-height: 1.25rem;
   }
 }
-
 

@@ -32,12 +32,17 @@ function dibujarVentas() {
         th = document.createElement("th")
         tr.append(th)
         th.innerText = el.precio    
+
+        th = document.createElement("th")
+        tr.append(th)
+        th.innerText = el.cant * el.precio    
         
     })
 
 }
 dibujarVentas()
 
+let selectVta = document.getElementById("productosInvVta");
 function crearVenta() {
 
     let id = selectVta.value;
@@ -63,7 +68,6 @@ function crearVenta() {
     console.log("Venta creada:", producto, cant, precio);
 }
 
-let selectVta = document.getElementById("productosInvVta");
 //Rellena el select
 function rellenarSelectVta() {
   localStorage.setItem("inventario", JSON.stringify(inventario));

@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="" type="image/x-icon" />
     <link rel="stylesheet" href="output.css" />
   </head>
-  <body class="flex text-white">
+  <body class="flex text-white" id="body">
     <!-- Navbar -->
     <nav
       id="navBar"
@@ -81,6 +81,14 @@
         >
           <i class="bi bi-list"></i>
         </button>
+        <!-- modo oscuro btn -->
+        <button
+          id="togglebg"
+          type="button"
+          class="block ml-2 mt-10 h-8 w-16 rounded-md bg-indigo-600 px-3.5 py-1 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        >
+        <i class="bi bi-moon"></i>
+        </button>
 
         <div class="flex-col m-auto items-center gap-4 my-2">
           <div class="flex items-center justify-center mt-4 gap-4">
@@ -138,9 +146,7 @@
             id="inputProductosCant"
             name="productosCant"
           />
-          <label class="text-sm items-start text-violet-500 mt-2" for="fecha"
-            >Fecha de la Compra</label
-          >
+        
           
           <button
             id="modCantInvBtn"
@@ -163,14 +169,14 @@
               <th class="pr-4 font-normal items-start text-2xl">Nombre</th>
               <th class="pr-4 font-normal text-2xl">Cant</th>
               <th class="pr-4 font-normal text-2xl">Precio Uni</th>
-              <th class="pr-4 font-normal items-start text-2xl">Operacion</th>
+              <th class="pr-4 font-normal items-start text-2xl">Total Compra</th>
             </tr>
           </thead>
           <tbody class="table-auto text-center ml-4" id="tableCompras2"></tbody>
           <tfoot class="table-footer-group">
             <tr>
               <th></th>
-              <th class="text-center">Total:</th>
+              <th class="text-center">Total Compras:</th>
               <th></th>
               <th class="text-center" id="total">0</th>
               <th></th>
